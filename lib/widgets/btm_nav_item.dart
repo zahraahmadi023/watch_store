@@ -10,7 +10,9 @@ class btmNavItem extends StatelessWidget {
   void Function() onTap;
 
     btmNavItem({
-      required this.iconSvgPath,required this.text,required this.isActive,
+      required this.iconSvgPath,
+      required this.text,
+      required this.isActive,
       required this.onTap
     
   });
@@ -25,9 +27,9 @@ class btmNavItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SvgPicture.asset(iconSvgPath,color: isActive?LightAppColors.btmNavActivaite:LightAppColors.btmNavInActivaite,),
+            SvgPicture.asset(iconSvgPath,color: isActive?AppColors.btmNavActivaite:AppColors.btmNavInActivaite,),
             //Icon(Icons.home_outlined, size: 30,),
-            SizedBox(height: 5,),
+            const SizedBox(height: 5,),
             Text(text,style:LightAppTextStyle.btmNavActivaite,
             // color: isActive?LightAppColors.btmNavActivaite:LightAppColors.btmNavInActivaite,
             ),
